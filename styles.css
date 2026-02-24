@@ -225,14 +225,29 @@ h1, h2, h3 {
   margin-bottom: calc(var(--spacing) * 5);
 }
 
-.hero__cta {
-  margin-bottom: calc(var(--spacing) * 2);
+.hero__scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: calc(var(--spacing) * 4);
 }
 
-.hero__urgency {
-  font-size: 0.9rem;
-  color: #999;
+.hero__scroll-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: #888;
   font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+.hero__scroll-arrow {
+  animation: bounceArrow 2s ease-in-out infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(8px); opacity: 1; }
 }
 
 .hero__image {
@@ -1421,16 +1436,19 @@ h1, h2, h3 {
   }
 
   .hero__image {
-    order: -1;
+    order: 2;
+  }
+
+  .hero__content {
+    order: 1;
   }
 
   .hero__institutional {
     justify-content: center;
   }
 
-  .hero__cta {
-    margin-left: auto;
-    margin-right: auto;
+  .hero__photo {
+    max-width: 300px;
   }
 
   .stats-grid {
@@ -1490,6 +1508,19 @@ h1, h2, h3 {
 
   .hero__sub-headline {
     font-size: 1.05rem;
+  }
+
+  .hero__photo {
+    max-width: 220px;
+    border-radius: 50%;
+  }
+
+  .hero__image {
+    order: 2;
+  }
+
+  .hero__content {
+    order: 1;
   }
 
   .hero__institutional {
@@ -1705,6 +1736,14 @@ h1, h2, h3 {
 
   .hero__sub-headline {
     font-size: 0.95rem;
+  }
+
+  .hero__photo {
+    max-width: 180px;
+  }
+
+  .hero__scroll-text {
+    font-size: 0.85rem;
   }
 
   .hero__badge {
