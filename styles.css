@@ -235,11 +235,11 @@ h1, h2, h3 {
 }
 
 .hero__scroll-hint {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin-top: calc(var(--spacing) * 4);
+  margin-top: calc(var(--spacing) * 2);
 }
 
 .hero__scroll-text {
@@ -1472,6 +1472,10 @@ h1, h2, h3 {
 
   .hero__photo {
     max-width: 300px;
+  }
+
+  .hero__scroll-hint {
+    display: flex;
   }
 
   .stats-grid {
