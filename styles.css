@@ -252,8 +252,22 @@ h1, h2, h3 {
 
 .hero__image {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 12px;
+}
+
+.hero__name-tag {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  background: var(--accent);
+  padding: 6px 20px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
 }
 
 .hero__photo {
@@ -1512,7 +1526,10 @@ h1, h2, h3 {
 
   .hero__photo {
     max-width: 220px;
-    border-radius: 50%;
+  }
+
+  .hero__name-tag {
+    display: inline-block;
   }
 
   .hero__image {
