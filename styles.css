@@ -212,6 +212,15 @@ h1, h2, h3 {
   letter-spacing: 1px;
 }
 
+.hero__badge-line1,
+.hero__badge-line2 {
+  display: inline;
+}
+
+.hero__badge-line2 {
+  font-weight: 800;
+}
+
 .hero__headline {
   font-size: clamp(1.8rem, 3.5vw, 3.15rem);
   color: var(--secondary);
@@ -1541,13 +1550,46 @@ h1, h2, h3 {
   }
 
   .hero__institutional {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
   }
 
   .logo-anhanguera--hero {
-    height: 40px;
+    height: 52px;
+    flex-shrink: 0;
+  }
+
+  .hero__badge {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.2;
+  }
+
+  .hero__badge-line1 {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--secondary);
+    opacity: 0.7;
+  }
+
+  .hero__badge-line2 {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-light);
+    background: var(--accent);
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    width: fit-content;
   }
 
   .solution__credential {
@@ -1769,7 +1811,15 @@ h1, h2, h3 {
   }
 
   .logo-anhanguera--hero {
-    height: 32px;
+    height: 44px;
+  }
+
+  .hero__badge-line1 {
+    font-size: 0.6rem;
+  }
+
+  .hero__badge-line2 {
+    font-size: 0.75rem;
   }
 
   .section-title {
